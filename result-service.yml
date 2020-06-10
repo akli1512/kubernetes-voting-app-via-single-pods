@@ -17,7 +17,6 @@ spec:
       port: 5858
       nodePort: 30003
       targetPort: 5858
-
   selector:
     name: result
     app: voting-app

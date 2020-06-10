@@ -6,6 +6,7 @@ metadata:
     name: result
     app: voting-app
     tier: frontend
+
 spec:
   containers:
     -  name: result-container
@@ -13,3 +14,4 @@ spec:
        ports:
          - containerPort: 80
          - containerPort: 5858
+

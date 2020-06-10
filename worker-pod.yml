@@ -6,6 +6,7 @@ metadata:
     name: worker
     app: voting-app
     tier: backend
+
 spec:
   containers:
     -  name: worker-container

@@ -6,6 +6,7 @@ metadata:
     name: db
     app: voting-app
     tier: backend
+
 spec:
   containers:
     -  name: db-container
