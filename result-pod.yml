@@ -1,14 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: result-pod
+  name: result
   labels:
-    name: result-pod
+    name: result
     app: voting-app
     tier: frontend
 spec:
   containers:
     -  name: result-container
-       image: example-voting-app_result
+       image: akli1512/example-voting-app_result:v1
        ports:
          - containerPort: 80
+         - containerPort: 5858

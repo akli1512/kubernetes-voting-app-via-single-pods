@@ -3,18 +3,18 @@ kind: Service
 metadata:
   name: vote
   labels:
-    name: vote-service
+    name: vote
     app: voting-app
     tier: frontend
 spec:
   type: NodePort
   ports:
-    targetPort: 80
-    port: 80
-    nodePort: 69690
+   - port: 80
+     targetPort: 80
+     nodePort: 30000
 
 
   selector:
-    name: vote-pod
+    name: vote
     app: voting-app
     tier: frontend

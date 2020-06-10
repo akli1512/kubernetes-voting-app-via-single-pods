@@ -3,18 +3,22 @@ kind: Service
 metadata:
   name: result
   labels:
-    name: result-service
+    name: result
     app: voting-app
     tier: frontend
 spec:
   type: NodePort
   ports:
-    targetPort: 80
-    port: 80
-    nodePort: 69691
-
+    - name: port1
+      port: 80
+      nodePort: 30001
+      targetPort: 80
+    - name: port2
+      port: 5858
+      nodePort: 30003
+      targetPort: 5858
 
   selector:
-    name: result-pod
+    name: result
     app: voting-app
     tier: frontend

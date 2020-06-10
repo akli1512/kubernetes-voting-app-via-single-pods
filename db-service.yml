@@ -9,11 +9,11 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    targetPort: 5432
-    port: 5432
+    - port: 5432
+      targetPort: 5432
 
 
   selector:
-    name: db-pod
+    name: db
     app: voting-app
     tier: backend

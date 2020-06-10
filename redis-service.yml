@@ -3,17 +3,17 @@ kind: Service
 metadata:
   name: redis
   labels:
-    name: redis-service
+    name: redis
     app: voting-app
     tier: backend
 spec:
   type: ClusterIP
   ports:
-    targetPort: 6379
-    port: 6379
+    - port: 6379
+      targetPort: 6379
 
 
   selector:
-    name: redis-pod
+    name: redis
     app: voting-app
     tier: backend

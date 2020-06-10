@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: worker-pod
+  name: worker
   labels:
-    name: worker-pod
+    name: worker
     app: voting-app
     tier: backend
 spec:
   containers:
     -  name: worker-container
-       image: example-voting-app_worker
+       image: akli1512/example-voting-app_worker:v1
