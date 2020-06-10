@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vote-pod
+  labels:
+    name: vote-pod
+    app: voting-app
+    tier: frontend
+spec:
+  containers:
+    -  name: vote-container
+       image: example-voting-app_vote
+       ports:
+         - containerPort: 80
+
